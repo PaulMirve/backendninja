@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Agregar Usuario</h1>
+        <br/>
+        <form action="#" th:action="@{/contacts/addUser}" th:object="${userCredential}" method="post">
+            Usuario: <input type="text" class="form-control" th:field="*{username}"></input>
+            <br/>
+            Contraseña: <input type="text" class="form-control" th:field="*{password}"></input>
+            <br/>
+            Enabled: <input type="text" class="form-control" th:field="*{enabled}"></input>
+            <br/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
