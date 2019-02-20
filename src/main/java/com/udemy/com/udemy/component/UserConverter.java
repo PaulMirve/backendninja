@@ -20,10 +20,6 @@ public class UserConverter {
 
     public UserCredential convertUser2UserModel(User user){
         UserCredential userCredential = new UserCredential();
-        /*String pass = userCredential.getPassword();
-        BCryptPasswordEncoder pe = new BCryptPasswordEncoder();
-        String password = pe.encode(pass);
-        userCredential.setPassword(password);*/
         userCredential.setPassword(user.getPassword());
         userCredential.setUsername(user.getUsername());
         userCredential.setEnabled(user.isEnabled());
