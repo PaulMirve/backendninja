@@ -80,7 +80,7 @@ public class ContactController {
                           Model model){
         log.info("addUser()");
         userService.addUser(userCredential);
-        return "/login";
+        return "redirect:/login";
     }
 
     @GetMapping("/addUserForm")
